@@ -1,8 +1,9 @@
 const express= require('express')
 const app = express();
 const port = 4040;
-
 app.listen(port);
+
+
 
 app.get('/',(req,res)=>{
     res.send('server online')
@@ -31,4 +32,8 @@ app.get('/rndNumbers',(request,respond)=>{
     }
     let result=Math.max(rndArr);
     respond.send();
+})
+
+app.post('/',(req,res)=>{
+    res.send(`fff ${req.body.firstName}`)
 })
